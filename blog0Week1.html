@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style type="text/css">
+    .background {background-color: lightgrey;}
+  </style>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Abdul Rizwan</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">Post</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/Apache.jpeg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Week One Blog</h1>
+            <h2 class="subheading">Apache2 installation</h2>
+            <span class="meta">Posted by Abdul Rizwan</a>
+              on Jan 30, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>This week blog will be explaining how to install apache http server on unix and unix-like system. What is apache? Apache is a free web server software that powers a big amount to internet websites. It is also known as “Apache HTTP server” and its developed by Apache Software Foundation.</p>
+
+          <p>To install a new software, it is good practice to check and update your software package to see if they are up to date. To update your local software package, open your terminal and type: </p>
+
+          <p class="background">sudo apt-get update</p>
+
+          <p>once the updating is finished we are ready to install apache. To install apache, type this command in your terminal.</p>
+
+          <p class="background">sudo apt-get install apache2</p>
+          <p>After the installation is done make run this command to make sure it was successfully installed</p>
+          <p class="background">apache2 -v</p>
+          <p>Once you get the version it means you have installed apache successfully.</p>
+          <p>To run the apache, you will need to run this command in your terminal.</p>
+          <p class="background">service apache2 start</p>
+          <p>To check the status run this command.</p>
+          <p class="background">service apache2 status</p>
+          <p>At this point apache should be running and installed successfully. To verify it, we can go on localhost in our web browser.</p>
+          <p class="background">Localhost:8080</p>
+          <p>And you should get a reply back with a webpage if you are using ubuntu it will say “Apache2 “Ubuntu Default page”.</p>
+          <p>Run this command in your terminal to stop apache.</p>
+          <p class="background">service apache2 stop</p>
+          <p>To restart it, run this command.</p>
+          <p class="background">service apache2 restart.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+          
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/Abdul-GR/Cit481Blog" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+          </ul>
+          <p class="copyright text-muted"></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
