@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style type="text/css">
+    .background {background-color: lightgrey;}
+  </style>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Blog week 4</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Abdul Rizwan</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">Post</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/AWS-logo2.png')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Week Four Blog</h1>
+            <h2 class="subheading">AWS EC2</h2>
+            <span class="meta">Posted by Abdul Rizwan</a>
+              on Feb 20, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h2>AWS EC2 Instance </h2>
+          <p>Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.</p>
+
+          
+          
+          <p>In this blog post we will be setting up Amazon EC2 instance.</p>
+          <p>To setup an EC2 instance you will need to have an account with aws.</p>
+          <p>If you have an account you can login using this link <a href="https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&forceMobileApp=0">aws login</a> </p>
+          <p>If you dont, you need to signup with aws with this link <a href="https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start">aws signup</a></p>
+          <h4>Setting up EC2 Instance</h4> 
+          <p>After siningup/login search for EC2 in Find services and click on EC2. It will take you to EC2 page.</p>
+          <p>On EC2 page on your left side choose Instances from <a href="https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Home:">EC2 Dashboard </a>, Choose "Launch Instance". </p> 
+          <h4>Configure your instance</h4>
+          <p>There are any Ami that you can choose depending on your need but for this example we will be using free tier which mean you wont get charged.</p>
+          <p><b>Choose an Amazon Machine Image(AMI): </b>In this step you will be choosing your Machine Image. Choose which saying "Free tier eligible" example: Amazon Linux 2.</p>
+          <p><b>Choose an Instance Type: </b>In this step you will be choosing memory, CPU. Choose the one saying free tier eligible like t2.micro. Click Next: configure Instance Details. </p>
+          <p>This is just a simple EC2 installation so just click Next and give 8GB storage and go to step 6.</p>
+          <p><b>Configure Security Group: </b>select SSH rule and give port 22. This is your firewall, who you want to go in and out. Click Review Launch instance. </p>
+          <p><b>Review Instance Launch: </b>Here you view you instance what you have mad if something to change you can go back and change them. Click Launch.</p>
+          <p>A window will pop up, Choose creat a new key pair and give key name and download it. Save this in a safe place as we will later use this file to log in to the instance. Click Launch Instances.  </p>
+          <p>Click on view my instances. it will take you to your instaces page where you will see the status of your Instance that you just created.</p>
+          <p>You need to gave permistion to your key you just downloaded by running this command in your terminal.</p>
+          <p class="background">chmod 400 keyname.pem</p>
+          <p>You can ssh into your instance by your DNS or the IP you can find in Description and run this command in terminal.</p>
+          <p class="background">ssh -i "/path/to/your/key/keyname.pem" ec2-user@IPorDNS</p>
+          <p>You can see this information by clicking on connect it will show you how to ssh into your machine.</p>
+          <h4>Terminate Instance</h4>
+          <p>EC2 is free to start but you should terminate your instances after you are done so you dont get charged extra if you choose not free tier. To do that click on Action and select terminate. </p>
+
+          <p>This will Terminate you selected instance.</p>
+          
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+          
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/Abdul-GR/Cit481Blog" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+          </ul>
+          <p class="copyright text-muted"></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
